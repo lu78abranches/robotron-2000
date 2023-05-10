@@ -2,6 +2,8 @@
     --main-cinza: #CCCCCC;
     --main-branco: #FFFFFF;
     --main-preto: #000000;
+    --main-amarelo: #f5e90a; 
+
 }
 
 * {
@@ -38,7 +40,7 @@ main {
 }
 
 .robo {
-    height: 110%;
+    height: 100%;
     z-index: 1;
     position: absolute;
     left: 0%;
@@ -63,6 +65,44 @@ main {
     clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
     border-left: 5px solid var(--main-cinza);
     height: 80%;
+}
+
+.container{
+    display: flex;
+    align-items: first baseline;
+    
+}
+
+.botoes{
+    margin: 1em;
+    
+    
+}
+
+.botoes__paragrafo{
+    font-size: 17px;
+    margin-left: 0.5rem;
+    color: var(--main-amarelo);
+    font-weight: 600;
+
+}
+
+.botoes__cor{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 1rem;
+    padding: 0.2em 1em;
+    border: 3px solid var(--main-branco);
+    background: var(--main-branco);
+    clip-path: polygon(100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 0);
+    cursor: pointer;
+}
+
+.botoes__cor:hover{
+    font-size: .9rem;
+    transition: .3s;
+    background-color: var(--main-preto);
+    color: var(--main-branco);
 }
 
 /****************************** Equipamentos *****/
@@ -222,12 +262,115 @@ main {
 
 @media screen and (max-width: 1200px) {
     body { 
-        font-size: 13px;
+        font-size: 10px;
     }
 
     main {
-        width: 96vw;
-        height: 80vh;
-        margin: 10vh auto;
+        width: 60vw;
+        height: 60vh;
+        margin: 5em;
+        
     }
+
+    .container {
+        display: flex;
+
+    }
+
+    .botoes{
+        margin: 3em;
+        
+        
+    }
+    
+    .botoes__paragrafo{
+        font-size: 10px;
+        margin-left: 0.5rem;
+        color: var(--main-amarelo);
+        font-weight: 600;
+    
+    }
+
+    .botoes__cor{
+        width: 12%;
+        height: 10%;
+        margin: 5px;
+        font-size: 5px;
+        clip-path: none;
+    }
+
+    .botoes__cor:hover{
+        font-size: .6rem;
+    }
+
+    .titulo {
+        
+        font-weight: 500;
+        font-size: 50px;
+        position: absolute;
+        bottom: 7rem;
+        left: 0;
+        top: 35rem;
+        line-height: 0.8;
+        
+        color: rgba(255,255,255,0.8)
+    }
+
+    .robo {
+        height: 75%;
+        z-index: 1;
+        position: absolute;
+        top: 19rem;
+
+    }
+
+    .controle {
+        padding: 15px 15px 15px 15px;
+        
+    }
+
+    .box{
+        padding: 15px 20px 20px 20px;
+        height: 100%;
+        margin-top: -25px;
+    }
+
+    .controle-ajuste {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 22px;
+        border-radius: 25%;
+        color: var(--main-cinza);
+        font-size: 2em;
+        background: var(--main-preto);
+        text-align: center;
+        border: 1.5px solid var(--main-cinza);
+        cursor: pointer;
+    }
+
+    .producao {
+        margin-top: -15em;
+        font-size: 3em;
+        padding: 0.2em 1em;
+        clip-path: none;   
+        
+    }
+
+    .estatistica-numero {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-46%);
+        width: 100%;
+        line-height: 75%;
+        text-align: center;
+        font-size: 2em;
+        margin: 0;
+    }
+
+    
+
+    
+
+    
 }

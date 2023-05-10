@@ -60,6 +60,14 @@ function atualizaEstatistica(peca) {
     })
 }
 
+const botao = document.querySelectorAll("[data-botao");
+
+botao.forEach((elemento) =>{
+    elemento.addEventListener("click", (evento) =>{
+        cor = evento.target.dataset.botao;
+        document.querySelector(".robo").src="img/robotron-" + cor + ".png";
+    })
+})
 
 
 
