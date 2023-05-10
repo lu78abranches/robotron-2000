@@ -60,7 +60,7 @@ function atualizaEstatistica(peca) {
     })
 }
 
-const botao = document.querySelectorAll("[data-botao");
+const botao = document.querySelectorAll("[data-botao]");
 
 botao.forEach((elemento) =>{
     elemento.addEventListener("click", (evento) =>{
@@ -68,7 +68,6 @@ botao.forEach((elemento) =>{
         document.querySelector(".robo").src="img/robotron-" + cor + ".png";
     })
 })
-
 
 
 
