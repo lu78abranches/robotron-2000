@@ -101,14 +101,25 @@ main {
     background-color: yellow;
 }
 
+
 .alterar {
-    width: 40px;
-    height: 30px;
-    margin: 1em  0.5em 1em 0.5em;
-    border-radius:  100%;
-    
-    
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    width: 30px;
+    aspect-ratio: 1/1;
+    transition: transform 0.3s;
+    margin: 2em 0 0 1em;  
 }
+
+.alterar:hover{
+    transform: scale(130%);
+
+    transition: transform 0.3s;
+}
+.alterar:active{
+    transform: scale(90%);
+}
+
 
 
 
